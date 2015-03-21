@@ -16,3 +16,6 @@ in depend on certain conditions, like VM faults or hangs.
 
 The ZFS ZVOLs and iSCSI targets will be used as a VM storage.
 The VALE will be used as an inter-VM ethernet switch.
+
+The main reason of starting this project is my desire to get
+familliar with golang, bhyve and FreeBSD in common.

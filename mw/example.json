@@ -1,0 +1,7 @@
+{
+	"vmname": "test-vm-0",
+	"storage": "/dev/null",
+	"netif" : "lo0",
+	"memsize": 1024,
+	"numcores": 4
+}
