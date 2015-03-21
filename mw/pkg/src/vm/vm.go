@@ -48,7 +48,7 @@ func (r *VmState) CreateVM() error {
 	var args []string
 
 	if r.Loader != "" {
-		err := r.PrepareLoaderArgs(args)
+		err, args := r.PrepareLoaderArgs(args)
 		if err != nil {
 			return err
 		}
@@ -61,9 +61,8 @@ func (r *VmState) CreateVM() error {
 			return err
 		}
 	}
-	args = args[0:0]
 	if r.Hypervisor != "" {
-		err := r.PrepareHypervisorArgs(args)
+		err, args := r.PrepareHypervisorArgs(args)
 		cmd := exec.Command(r.Hypervisor, args...)
 		if err = cmd.Start(); err != nil {
 			return err
