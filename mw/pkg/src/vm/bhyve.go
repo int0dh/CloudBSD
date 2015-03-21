@@ -17,10 +17,10 @@ func (r *VmState) PrepareLoaderArgs(args []string) (error, []string) {
 	}
 	args = args[0:0]
 	args = append(args, "-d")
-	args = append(args, r.config.storage)
+	args = append(args, r.config.Storage)
 	args = append(args, "-m")
-	args = append(args, strconv.Itoa(r.config.memsize))
-	args = append(args, r.config.vmname)
+	args = append(args, strconv.Itoa(r.config.Memsize))
+	args = append(args, r.config.Vmname)
 
 	return nil, args
 }

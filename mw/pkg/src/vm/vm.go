@@ -12,11 +12,11 @@ import (
 // or one disk per VM
 // but let`s keep thing simply at this stage
 type VmConfig struct {
-	vmname   string
-	storage  string
-	netif    string
-	memsize  int
-	numcores int
+	Vmname   string
+	Storage  string
+	Netif    string
+	Memsize  int
+	Numcores int
 }
 
 type VmState struct {
@@ -53,6 +53,7 @@ func (r *VmState) CreateVM() error {
 			return err
 		}
 		cmd := exec.Command(r.Loader, args...)
+
 		cmd.Stdin = strings.NewReader("\n\n")
 		if err = cmd.Start(); err != nil {
 			return err
@@ -83,6 +84,7 @@ func (r *VmState) InitVM(fileName string) error {
 		return err
 	}
 	r.config = &result
+
 	return nil
 }
 
