@@ -15,6 +15,7 @@ type VmConfig struct {
 	Vmname   string
 	Storage  string
 	Netif    string
+	Console	 string
 	Memsize  int
 	Numcores int
 }
