@@ -1,0 +1,8 @@
+{
+	"vmname": "test-vm-0",
+	"storage": "/dev/zvol/rpool/VM/disk-freebsd-dev",
+	"netif" : "tap0",
+	"memsize": 1024,
+	"console":"/dev/nmdm1A",
+	"numcores": 4
+}
